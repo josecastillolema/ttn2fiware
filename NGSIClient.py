@@ -1,5 +1,6 @@
 import requests
 import json
+import re
 
 siteTTN = "http://thethingsnetwork.org/api/v0/nodes/012AE716"
 #siteFIWARE = "http://orion.pad.lsi.usp.br:11026/"
@@ -17,7 +18,6 @@ def getInfoFromTTN():
     #print r.text
     #print '-----'
     #print r.json()
-    print '----------------'
     #print r.json()[0]
     #print r.json()[0]['data']
     return r.json()[0]
@@ -27,6 +27,13 @@ def getInfoFromTTN():
 
   else:
     print "Unknown result"
+
+def cleanInfoFromTTN(r):
+    for i in r:
+        r[i] = re.sub('=', '', r[i])
+    #for i in r:
+    #    print i, r[i]
+    return r
 
 def createContext(type, id, attributes):
   body =  {
@@ -41,7 +48,7 @@ def createContext(type, id, attributes):
 	"updateAction": "APPEND"
   }
   print
-  print json.dumps(body)
+  #print json.dumps(body)
   print
   headers = {
         "Accept": "application/json",
@@ -75,7 +82,7 @@ def getContext(type, id):
 	"Accept": "application/json",
 	"Content-type": "application/json"
   }
-  r = requests.post("http://130.206.82.80:1026/NGSI10/queryContext", data=json.dumps(body), headers=headers)
+  r = requests.post(siteFIWARE+"v1/queryContext", data=json.dumps(body), headers=headers)
   print "The response code is " + str(r.status_code)
 
   if r.status_code == 200:
