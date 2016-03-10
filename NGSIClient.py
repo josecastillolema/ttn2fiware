@@ -1,3 +1,5 @@
+# Author: Jose Castillo Lema <josecastillolema@gmail.com>
+
 import requests
 import json
 import re
