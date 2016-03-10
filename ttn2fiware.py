@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-# Jose Castillo Lema - josecastillolema@gmail.com
+# Author: Jose Castillo Lema <josecastillolema@gmail.com>
+
 from time import sleep
 import NGSIClient
 
