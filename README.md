@@ -1,6 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/josecastillolema/ttn2fiware)
 ![GitHub language count](https://img.shields.io/github/languages/count/josecastillolema/ttn2fiware)
 ![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/ttn2fiware)
+![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/josecastillolema/ttn2fiware)
 ![GitHub Pipenv locked dependency version](https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/ttn2fiware/requests)
 [![Requirements Status](https://requires.io/github/josecastillolema/ttn2fiware/requirements.svg?branch=master)](https://requires.io/github/josecastillolema/ttn2fiware/requirements/?branch=master)
 
